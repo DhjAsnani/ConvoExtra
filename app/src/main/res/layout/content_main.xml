@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_main" tools:context=".MainActivity">
+
+    <TextView android:text="@string/convert_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/convert_cap"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/convert_entry"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/convert_cap"
+        android:layout_toEndOf="@+id/convert_cap" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/unit_type_spinner"
+        android:layout_below="@+id/convert_entry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <!--now we are adding a grid layout through design panel
+    we have to define the number of columns and rows we have
+    and set it as fill parent and set orientation-->
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/unit_type_spinner"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:columnCount="2"
+        android:rowCount="6"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:background="#7730f5e4">
+        <TextView
+            android:id="@+id/tsp_text_view"
+            android:text="1.0 teaspoon"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/cup_text_view"
+            android:text=".0208 cup"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/tbs_text_view"
+            android:text=".3333 tbs"
+            android:layout_gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/oz_text_view"
+            android:text=".1666 oz"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/kg_text_view"
+            android:text=".0057 kg"
+            android:layout_gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/quart_text_view"
+            android:text=".0052 quart"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/gallon_text_view"
+            android:text=".0013 gallon"
+            android:layout_gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/pound_text_view"
+            android:text=".0125 pound"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/ml_text_view"
+            android:text="4.9289 ml"
+            android:layout_gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="30dp" />
+
+        <TextView
+            android:id="@+id/liter_text_view"
+            android:text=".0049 liter"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+
+        <TextView
+            android:id="@+id/mg_text_view"
+            android:text="5687.5000 mg"
+            android:layout_gravity="left|top"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:id="@+id/pint_text_view"
+            android:text=".0104 pint"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_gravity="left|top" />
+    </GridLayout>
+</RelativeLayout>
